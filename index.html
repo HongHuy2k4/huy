@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K-Movie</title>
+  <link rel="icon" href="./img/favicon.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./script.js">
+</head>
+
+<body>
+  <!-- header section starts -->
+  <header class="header">
+    <a href="#" class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/3936/3936930.png" alt="LOGO">
+    </a>
+
+    <nav class="navbar">
+      <a href="#home">home</a>
+      <a href="#about">about</a>
+      <a href="#movies">movies</a>
+      <a href="#deals">deals</a>
+      <a href="#contact">contact</a>
+      <a href="#tickets">tickets</a>
+    </nav>
+
+    <div class="icons">
+      <div class="fas fa-search" id="search-btn"></div>
+      <div class="fas fa-shopping-cart" id="cart-btn"></div>
+      <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+
+    <div class="search-form">
+      <input type="search" id="search-box" placeholder="Search...">
+      <label for="search-box" class="fas fa-search"></label>
+    </div>
+
+    <div class="cart-items-container">
+      <div class="cart-item">
+        <span class="fas fa-times"></span>
+        <img src="https://cdn.eventcinemas.com.au/cdn/resources/movies/16580/images/largeposter.jpg" alt="CART-ITEM">
+        <div class="content">
+          <h3>Spider-Man</h3>
+          <div class="price">$12.99</div>
+        </div>
+      </div>
+      <div class="cart-item">
+        <span class="fas fa-times"></span>
+        <img src="https://cdn.eventcinemas.com.au/cdn/resources/movies/16337/images/largeposter.jpg" alt="CART-ITEM">
+        <div class="content">
+          <h3>The Super Mario</h3>
+          <div class="price">$15.99</div>
+        </div>
+      </div>
+      <div class="cart-item">
+        <span class="fas fa-times"></span>
+        <img src="https://cdn.eventcinemas.com.au/cdn/resources/movies/16233/images/largeposter.jpg" alt="CART-ITEM">
+        <div class="content">
+          <h3>The Flash</h3>
+          <div class="price">$15.99</div>
+        </div>
+      </div>
+      <a href="#" class="btn">Checkout</a>
+    </div>
+  </header>
+  <!-- header section ends -->
+
+  <!-- home section starts -->
+  <section class="home" id="home">
+    <div class="content">
+      <h3>K-Movie</h3>
+      <p>Immerse Yourself in the World of Cinema!</p>
+    </div>
+  </section>
+  <!-- home section ends -->
+
+  <!-- about section starts -->
+  <section class="about" id="about">
+    <h1 class="heading"> <span>about</span> us </h1>
+    <div class="row">
+      <div class="image">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Cinema_queue.jpg" alt="ABOUT">
+      </div>
+      <div class="content">
+        <h3>Do you hate having to queue up to buy tickets?</h3>
+        <p>Booking movie tickets online brings many benefits to users. Online ticket booking allows you to easily purchase tickets from anywhere and at any time, choose suitable showtimes, and enjoy special offers. Additionally, payment information is secure, and you can easily manage your ticket information. Therefore, our website will help you have the best movie-watching experience!</p>
+      </div>
+    </div>
+  </section>
+  <!-- about section ends -->
+
+  <!-- movies section starts  -->
+  <section class="movies" id="movies">
+    <h1 class="heading"> our <span>movies</span> </h1>
+    <div class="box-container">
+      <div class="box">
+        <img src="https://cdn.eventcinemas.com.au/cdn/resources/movies/16580/images/largeposter.jpg" alt="MOVIE">
+        <h3>Spider-Man</h3>
+        <div class="price">$12.99 <span>$19.99</span> </div>
+        <button id="myBtn-1" class="btn">Read more</button>
+      </div>
+      <div class="box">
+        <img src="https://cdn.eventcinemas.com.au/cdn/resources/movies/16704/images/largeposter.jpg" alt="MOVIE">
+        <h3>The Little Mermaid</h3>
+        <div class="price">$12.99 <span>$19.99</span> </div>
+        <button id="myBtn-2" class="btn">Read more</button>
+      </div>
+      <div class="box">
+        <img src="https://cdn.eventcinemas.com.au/cdn/resources/movies/16703/images/largeposter.jpg" alt="MOVIE">
+        <h3>Fast X</h3>
+        <div class="price">$15.99 <span>$19.99</span> </div>
+        <button id="myBtn-3" class="btn">Read more</button>
+      </div>
+      <div class="box">
+        <img src="https://cdn.eventcinemas.com.au/cdn/resources/movies/16337/images/largeposter.jpg" alt="MOVIE">
+        <h3>The Super Mario</h3>
+        <div class="price">$15.99 <span>$19.99</span> </span> </div>
+        <button id="myBtn-4" class="btn">Read more</button>
+      </div>
+      <div class="box">
+        <img src="https://cdn.eventcinemas.com.au/cdn/resources/movies/1062/images/largeposter.jpg" alt="MOVIE">
+        <h3>The Boogeyman</h3>
+        <div class="price">$15.99 <span>$19.99</span> </div>
+        <button id="myBtn-5" class="btn">Read more</button>
+      </div>
+      <div class="box">
+        <img src="https://img.tinyzonetv.to/xxrz/250x400/202/cc/24/cc2441e1ee7f9ad2efcb3e3e710990bc/cc2441e1ee7f9ad2efcb3e3e710990bc.jpg" alt="MOVIE">
+        <h3>The wrath of Becky</h3>
+        <div class="price">$15.99 <span>$19.99</span> </div>
+        <button id="myBtn-6" class="btn">Read more</button>
+      </div>
+      <div class="box">
+        <img src="https://cdn.eventcinemas.com.au/cdn/resources/movies/16233/images/largeposter.jpg" alt="MOVIE">
+        <h3>The Flash</h3>
+        <div class="price">$15.99 <span>$19.99</span> </div>
+        <button id="myBtn-7" class="btn">Read more</button>
+      </div>
+      <div class="box">
+        <img src="https://img.tinyzonetv.to/xxrz/250x400/202/d0/f9/d0f9d189e2936945606bf528f43a3b3b/d0f9d189e2936945606bf528f43a3b3b.jpg" alt="MOVIE">
+        <h3>Black Clover</h3>
+        <div class="price">$12.99 <span>$19.99</span> </div>
+        <button id="myBtn-8" class="btn">Read more</button>
+      </div>
+    </div>
+  </section>
+  <!-- movies section ends  -->
+
+  <section class="deals" id="deals">
+    <h1 class="heading"> best <span>deals</span> </h1>
+    <div class="box-container">
+      <div class="box">
+        <div class="icons">
+          <a href="#" class="fas fa-shopping-cart"></a>
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+          <img src="https://cdn.eventcinemas.com.au/cdn/resources/movies/16580/images/largeposter.jpg" alt="DEAL">
+        </div>
+        <div class="content">
+          <h3>Across The Spider-Verse</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <div class="price">$12.99 <span>$19.99</span> </div>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="icons">
+          <a href="#" class="fas fa-shopping-cart"></a>
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+          <img src="https://cdn.eventcinemas.com.au/cdn/resources/movies/16704/images/largeposter.jpg" alt="DEAL">
+        </div>
+        <div class="content">
+          <h3>The Little Mermaid</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <div class="price">$12.99 <span>$19.99</span> </div>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="icons">
+          <a href="#" class="fas fa-shopping-cart"></a>
+          <a href="#" class="fas fa-heart"></a>
+          <a href="#" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+          <img src="https://img.tinyzonetv.to/xxrz/250x400/202/d0/f9/d0f9d189e2936945606bf528f43a3b3b/d0f9d189e2936945606bf528f43a3b3b.jpg" alt="DEAL">
+        </div>
+        <div class="content">
+          <h3>Sword of the wizard king</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <div class="price">$12.99 <span>$19.99</span> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- contact section starts  -->
+  <section class="contact" id="contact">
+    <h1 class="heading"> <span>contact</span> us </h1>
+    <div class="row">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61342.25763510949!2d108.14763404863281!3d16.0711398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421831bea7651d%3A0xbb4619d455ec4348!2zUuG6oXAgQ2hp4bq_dSBwaGltIEzDqiDEkOG7mQ!5e0!3m2!1sen!2s!4v1687167133510!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      <form action="">
+        <h3>Get in touch</h3>
+        <div class="inputBox">
+          <span class="fas fa-user"></span>
+          <input type="text" placeholder="Name">
+        </div>
+        <div class="inputBox">
+          <span class="fas fa-envelope"></span>
+          <input type="email" placeholder="Email">
+        </div>
+        <div class="inputBox">
+          <span class="fas fa-phone"></span>
+          <input type="number" placeholder="Number">
+        </div>
+        <input type="submit" value="Contact now" class="btn">
+      </form>
+    </div>
+  </section>
+  <!-- contact section ends  -->
+
+  <!-- tickets section starts  -->
+  <section class="tickets" id="tickets">
+    <h1 class="heading"> Movie <span>Tickets</span> </h1>
+    <div class="box-container">
+      <div class="box">
+        <div class="image">
+          <img src="https://cdn.eventcinemas.com.au/cdn/resources/movies/16580/images/largeposter.jpg" alt="BLOG">
+        </div>
+        <div class="content">
+          <a href="#" class="title">Across the Spider-Verse</a>
+          <span>7th June, 2023</span>
+          <p>Miles Morales Ventures into the Multiverse, Where He Encounters a Group of Spider-People Tasked with Protecting Their Existence. As the Heroes Clash over Dealing with a New Threat, Miles Must Redefine the Meaning of Becoming a Hero.</p>
+          <a href="#" class="btn">Order now</a>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://cdn.eventcinemas.com.au/cdn/resources/movies/16704/images/largeposter.jpg" alt="BLOG">
+        </div>
+        <div class="content">
+          <a href="#" class="title">The Little Mermaid</a>
+          <span>10th June, 2023</span>
+          <p>A Young Mermaid Agreed to a Sea Witch's Deal to Exchange Her Enchanting Voice for a Pair of Human Legs, So She Could Explore the World above the Water and Pursue the Love of Her Life. <br> <br></p>
+          <a href="#" class="btn">Order now</a>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://img.tinyzonetv.to/xxrz/250x400/202/d0/f9/d0f9d189e2936945606bf528f43a3b3b/d0f9d189e2936945606bf528f43a3b3b.jpg" alt="BLOG">
+        </div>
+        <div class="content">
+          <a href="#" class="title">Sword of the wizard king</a>
+          <span>15th june, 2023</span>
+          <p>In a world where magic is everything, Asta, a boy who was born with no magic, aims to become the "Wizard King," to overcome adversity, prove his power, and keep his oath with his friends.
+            <br> <br>
+          </p>
+          <a href="#" class="btn">Order now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- tickets section ends  -->
+
+  <!-- footer section starts  -->
+  <section class="footer">
+    <div class="share">
+      <a href="#" class="fab fa-facebook-f"></a>
+      <a href="#" class="fab fa-twitter"></a>
+      <a href="#" class="fab fa-instagram"></a>
+      <a href="#" class="fab fa-linkedin"></a>
+      <a href="#" class="fab fa-pinterest"></a>
+    </div>
+
+    <div class="links">
+      <a href="#">home</a>
+      <a href="#about">about</a>
+      <a href="#movies">movies</a>
+      <a href="#deals">deals</a>
+      <a href="#contact">contact</a>
+      <a href="#tickets">tickets</a>
+    </div>
+
+    <div class="credit">created by <span>Dang Hong Huy</span></div>
+  </section>
+  <!-- footer section ends  -->
+
+  <!-- modal starts -->
+  <div class="modal-container">
+    <div class="modal">
+      <div class="modal-content">
+        <span class="fas fa-times"></span>
+
+        <iframe src="https://www.youtube.com/embed/shW9i6k8cB0" title="SPIDER-MAN: ACROSS THE SPIDER-VERSE - Official Trailer #2 (HD)" frameborder="0" allowfullscreen></iframe>
+
+        <p>Miles Morales Ventures into the Multiverse, Where He Encounters a Group of Spider-People Tasked with Protecting Their Existence. As the Heroes Clash over Dealing with a New Threat, Miles Must Redefine the Meaning of Becoming a Hero.</p>
+          <a href="#" class="btn">Order now</a>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal-content">
+        <span class="fas fa-times"></span>
+
+        <iframe src="https://www.youtube.com/embed/0-wPm99PF9U" title="The Little Mermaid | Official Teaser Trailer" frameborder="0" allowfullscreen></iframe>
+
+        <p>A Young Mermaid Agreed to a Sea Witch's Deal to Exchange Her Enchanting Voice for a Pair of Human Legs, So She Could Explore the World above the Water and Pursue the Love of Her Life.</p>
+          <a href="#" class="btn">Order now</a>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal-content">
+        <span class="fas fa-times"></span>
+
+        <iframe src="https://www.youtube.com/embed/kshxFw49kaI" title="FAST X | BOMB BALL MEETS BUS" frameborder="0" allowfullscreen></iframe>
+
+        <p>Dante is regarded as the most dangerous adversary they will ever face: a terrifying threat emerging from the shadows of the past, a bloodthirsty enemy determined to shatter the family and destroy everything that Dom holds dear forever!</p>
+          <a href="#" class="btn">Order now</a>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal-content">
+        <span class="fas fa-times"></span>
+
+        <iframe src="https://www.youtube.com/embed/yP-Qduvw9zY" title="The Super Mario Bros. Movie | Princess Peach Training Course Clip" frameborder="0" allowfullscreen></iframe>
+
+        <p>With help from Princess Peach, Mario gets ready to square off against the all-powerful Bowser to stop his plans from conquering the world.</p>
+          <a href="#" class="btn">Order now</a>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal-content">
+        <span class="fas fa-times"></span>
+
+        <iframe src="https://www.youtube.com/embed/cFqCmIU0-_M" title="The Boogeyman | Official Trailer | 20th Century Studios" frameborder="0" allowfullscreen></iframe>
+
+        <p>The Harper family is haunted by a supernatural entity that relentlessly disrupts their household. As this monster lurks in the shadows, eagerly preying on young Sawyer like a predator, her older sister Sadie and father Will must take action before it's too late.</p>
+          <a href="#" class="btn">Order now</a>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal-content">
+        <span class="fas fa-times"></span>
+
+        <iframe src="https://www.youtube.com/embed/Q-RnvQACrH0" title="The Wrath of Becky | Official Trailer" frameborder="0" allowfullscreen></iframe>
+
+        <p>Two years after she escaped a violent attack on her family, Becky attempts to rebuild her life in the care of an older woman -- a kindred spirit named Elena. But when a group known as the "Noble Men" break into their home, attack them, and take her beloved dog, Diego, Becky must return to her old ways to protect herself and her loved ones.</p>
+          <a href="#" class="btn">Order now</a>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal-content">
+        <span class="fas fa-times"></span>
+
+        <iframe src="https://www.youtube.com/embed/ZFQ7pYcbbis" title="The Flash - Supergirl Featurette - Warner Bros. UK &amp; Ireland" frameborder="0" allowfullscreen></iframe>
+
+        <p>In "The Flash," Barry's time travel to alter the past inadvertently traps him in a future without Super Heroes, threatened by the return of General Zod. He seeks help from a retired Batman to rescue a different Kryptonian and reset the universe. Racing for his life, Barry wonders if his ultimate sacrifice will be enough to save the world and return to his familiar future.</p>
+          <a href="#" class="btn">Order now</a>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal-content">
+        <span class="fas fa-times"></span>
+
+        <iframe src="https://www.youtube.com/embed/L4RcbOiqG6M" title="Character Promo Video: Conrad | Black Clover: Sword of the Wizard King | Netflix Anime" frameborder="0" allowfullscreen></iframe>
+        
+        <p>In a world where magic is everything, Asta, a boy who was born with no magic, aims to become the "Wizard King," to overcome adversity, prove his power, and keep his oath with his friends.</p>
+          <a href="#" class="btn">Order now</a>
+      </div>
+    </div>
+  </div>
+  <!-- modal ends -->
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  <script src="https://www.youtube.com/player_api"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
