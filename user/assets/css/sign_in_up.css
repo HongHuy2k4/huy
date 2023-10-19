@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root{
+  --main-color: #66FCF1;
+  --white: #ffffff;
+  --black: #13131a;
+  --bg: #010103;
+  --orange: #fca935;
+  --border: .1rem solid rgba(255,255,255,.3);
+}
+
+/* sign in/up main */
+.header h1{
+    font-size: 4rem;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+main{
+  background: linear-gradient(0, #11132c, #181a35);
+}
+
+main .wrapper{
+    background: url(../img/background-signin-up.jpg) center /contain no-repeat;
+    height: 85vh;
+    margin-top: 11rem;
+}
+
+main .wrapper-content{
+    position: relative;
+    top: 5rem;
+    left: 18rem;  
+    width: 30%;
+    padding: 15px;
+    background-color: var(--white);
+    border-radius: 8px;
+}
+
+main .wrapper-content h1{
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem 0;
+}
+
+main .wrapper-content form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 2rem;
+}
+
+main .wrapper-content form input{
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 12px;
+    margin: 12px;
+    outline: 1px solid #ccc ;
+}
+
+main .wrapper-content form button{
+    background-color: var(--orange);
+    color: var(--white);
+    font-size: 2rem;
+    padding: 1rem 14.6rem;
+    margin: 2rem 0;
+}
+
+main .wrapper-content ::placeholder{
+    color: #ccc;
+}
+
+main .wrapper-content .link{
+    margin: 0px 22px;
+    height: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+main .wrapper-content a{
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+main .wrapper-content a:hover{
+    color: var(--orange);
+}
+
+main .link a:nth-child(1){
+    float: left;
+}
+
+main .link a:nth-child(2){
+    float: right;
+}
+
+main .wrapper-content hr{
+    display: inline-block;
+    width: 45%;
+}
+
+main .wrapper-content span{
+    position: relative;
+    top: -0.4rem;
+    font-size: 2rem;
+    padding: 0 0.5rem;
+}
+
+main .wrapper-content .btn-icon{
+    position: relative;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 0.8rem 1.6rem 0.8rem 3rem;
+    margin: 0 1rem;
+    width: 44.8%;
+    background-color: var(--white);
+    border: 1px solid #ccc;
+}
+
+main .wrapper-content .img-icon-gg{
+    position: absolute;
+    top: 0.9rem;
+    left: 4.3rem;
+    width: 20%;
+}
+
+main .wrapper-content .img-icon-fb{
+    position: absolute;
+    top: 0.7rem;
+    left: 3.8rem;
+    width: 18%;
+    padding: 0 6px;
+}
+
+main .wrapper-content .btn-signup{
+    margin: 1rem 1.2rem;
+    padding: 1rem 10rem;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+main .wrapper-content .btn-signup a{
+    font-size: 1.4rem;
+}
