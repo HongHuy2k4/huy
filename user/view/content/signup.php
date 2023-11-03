@@ -1,26 +1,28 @@
 <?php
-    session_start();
     include("../../../database/connect.php");
-    include("../../controller/singinController.php");
+    include("../../controller/singupController.php");
 
-    $signinController = new SigninController($conn);
+    $signupController = new SignupController($conn);
     $warning ="";
-    if(isset($_POST['username'],$_POST['password'])){
+    if(isset($_POST['username'],$_POST['password'],$_POST['email'],$_POST['phonenumber'])){
         $warning_empty = "  <div class='notify' style='color: red;'>
                                 <i class='fa-solid fa-circle-exclamation'></i>
-                                username or password cannot be empty
+                                information cannot be empty
                             </div>";
-        $warning_wrong = "  <div class='notify' style='color: red;'>
+        $warning_susses = " <div class='notify' style='color:green'>
                                 <i class='fa-solid fa-circle-exclamation'></i>
-                                Username or password is wrong, please check again
+                                You have failed registered an account
                             </div>";
-        if(empty($_POST['username']) || empty($_POST['password'])){
+        $warning_susses = "  <div class='notify' style='color:green'>
+                                <i class='fa-solid fa-circle-exclamation'></i>
+                                You have successfully registered an account
+                            </div>";
+        if(empty($_POST['username']) || empty($_POST['password']) || empty($_POST['email']) || empty($_POST['phonenumber'])){
             $warning = $warning_empty;
         }else{
-            $result = $signinController->check($_POST['username'], $_POST['password']);
+            $result = $signupController->insert($_POST['username'], $_POST['password'],$_POST['email'], $_POST['phonenumber']);
             if($result){
-                $_SESSION['username'] = $_POST['username'];
-                header("location: ../../../index.php");
+                $warning = $warning_susses;
             }else{
                 $warning = $warning_wrong;
             }
@@ -33,7 +35,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng nhập</title>
+    <title>Đăng ký</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/css/component.css">
@@ -46,17 +48,19 @@
         <img src="https://cdn.logo.com/hotlink-ok/logo-social.png" alt="LOGO">
         </a>
 
-        <h1>Sign In</h1>
+        <h1>Sign Up</h1>
         <div class="clear-header"></div>
     </header>
 
     <main>
-        <div class="wrapper wrapper-signin">
+        <div class="wrapper wrapper-signup">
             <div class="wrapper-content">
-                <h1>Sign in</h1> 
+                <h1>Sign up</h1>
                 <form action="" method="post">
-                    <input type="text" name="username" id="username" placeholder="Username/Email">
+                    <input type="text" name="username" id="username" placeholder="Username">
                     <input type="password" name="password" id="password" placeholder="password">
+                    <input type="email" name="email" id="email" placeholder="email">
+                    <input type="text" name="phonenumber" id="phonenumber" placeholder="phonenumber">
                     <?php echo "$warning" ?>
                     <button type="submit">Đăng nhập</button>
                 </form>
@@ -79,7 +83,7 @@
                     </button>
                 </div>
 
-                <div class="btn-signup">No account? <a href="./signup.php">Sign Up</a></div>
+                <div class="btn-signup">Have an account? <a href="./signin.php">Sign In</a></div>
             </div>
         </div>
     </main>

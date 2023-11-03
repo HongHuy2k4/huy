@@ -62,6 +62,7 @@ CREATE TABLE category (
     I_id_category INT PRIMARY KEY AUTO_INCREMENT,
     T_name_category VARCHAR(50),
     T_description VARCHAR(500),
+    T_img_sample VARCHAR(45),
     I_id_parent INT
 );
 

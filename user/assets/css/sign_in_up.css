@@ -9,7 +9,6 @@
   --border: .1rem solid rgba(255,255,255,.3);
 }
 
-/* sign in/up main */
 .header h1{
     font-size: 4rem;
     color: var(--white);
@@ -20,23 +19,31 @@ main{
   background: linear-gradient(0, #11132c, #181a35);
 }
 
-main .wrapper{
+.wrapper{
     background: url(../img/background-signin-up.jpg) center /contain no-repeat;
     height: 85vh;
-    margin-top: 11rem;
+    margin-top: 12rem;
 }
 
-main .wrapper-content{
-    position: relative;
-    top: 5rem;
-    left: 18rem;  
+.wrapper-signin{
+    height: 85vh;
+    padding-top: 4%;
+}
+
+.wrapper-signup{
+    height: 100vh;
+    padding-top: 2%;
+}
+
+.wrapper-content{
+    margin-left: 16%;
     width: 30%;
-    padding: 15px;
+    padding: 1.5rem 2rem;
     background-color: var(--white);
     border-radius: 8px;
 }
 
-main .wrapper-content h1{
+.wrapper-content h1{
     font-size: 4rem;
     font-weight: 600;
     text-align: center;
@@ -44,15 +51,14 @@ main .wrapper-content h1{
     padding: 1rem 0;
 }
 
-main .wrapper-content form{
+.wrapper-content form{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 2rem;
 }
 
-main .wrapper-content form input{
+.wrapper-content form input{
     font-size: 1.5rem;
     width: 100%;
     padding: 12px;
@@ -60,87 +66,152 @@ main .wrapper-content form input{
     outline: 1px solid #ccc ;
 }
 
-main .wrapper-content form button{
+.wrapper-content form .notify{
+    font-size: 1.2rem;
+}
+
+.wrapper-content form button{
     background-color: var(--orange);
     color: var(--white);
     font-size: 2rem;
-    padding: 1rem 14.6rem;
+    width: 100%;
+    padding: 1rem 0;
     margin: 2rem 0;
 }
 
-main .wrapper-content ::placeholder{
+.wrapper-content ::placeholder{
     color: #ccc;
 }
 
-main .wrapper-content .link{
-    margin: 0px 22px;
+.wrapper-content .link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 1.5rem;
-    margin-bottom: 1.2rem;
 }
 
-main .wrapper-content a{
+.wrapper-content a{
     font-size: 1.2rem;
     font-weight: 400;
     text-decoration: none;
 }
 
-main .wrapper-content a:hover{
+.wrapper-content a:hover{
     color: var(--orange);
 }
 
-main .link a:nth-child(1){
+.link a:nth-child(1){
     float: left;
 }
 
-main .link a:nth-child(2){
+.link a:nth-child(2){
     float: right;
 }
-
-main .wrapper-content hr{
-    display: inline-block;
-    width: 45%;
+.wrapper-content .divide-button,
+.wrapper-content .divide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-main .wrapper-content span{
-    position: relative;
-    top: -0.4rem;
+.wrapper-content hr{
+    width: 46%;
+}
+
+.wrapper-content span{
     font-size: 2rem;
     padding: 0 0.5rem;
 }
 
-main .wrapper-content .btn-icon{
-    position: relative;
+.wrapper-content .btn-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1.4rem;
     font-weight: 500;
-    padding: 0.8rem 1.6rem 0.8rem 3rem;
+    padding: 0.8rem 1.6rem;
     margin: 0 1rem;
-    width: 44.8%;
+    width: 44%;
     background-color: var(--white);
     border: 1px solid #ccc;
 }
 
-main .wrapper-content .img-icon-gg{
-    position: absolute;
-    top: 0.9rem;
-    left: 4.3rem;
+.wrapper-content .btn-icon:hover{
+    background-color: #eee;
+}
+
+.wrapper-content .img-icon{
     width: 20%;
 }
 
-main .wrapper-content .img-icon-fb{
-    position: absolute;
-    top: 0.7rem;
-    left: 3.8rem;
-    width: 18%;
-    padding: 0 6px;
+.wrapper-content .img-icon-fb{
+    width: 12%;
+    margin-right: 6px;
 }
 
-main .wrapper-content .btn-signup{
+.wrapper-content .btn-signup{
     margin: 1rem 1.2rem;
-    padding: 1rem 10rem;
     font-size: 1.4rem;
     text-align: center;
 }
 
-main .wrapper-content .btn-signup a{
+.wrapper-content .btn-signup a{
     font-size: 1.4rem;
+}
+
+@media (max-width:1240px) {
+    .wrapper-content a{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:900px){
+    .wrapper-signin{
+        padding-top: 8%;
+    }
+
+    .wrapper-signin{
+        padding-top: 4%;
+    }
+
+    .wrapper-content h1{
+        font-size: 2rem;
+    }
+
+    .wrapper-content form input{
+        font-size: 0.8rem;
+        margin: 8px;
+        padding: 8px;
+    }
+
+    .wrapper-content form button{
+        margin: 0.5rem 0;
+        font-size: 1rem;
+    }
+
+    .wrapper-content .divide-button{
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    .wrapper-content .btn-icon{
+        margin: 1rem;
+        width: 80%;
+    }
+
+    .wrapper-content a{
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width:650px){
+    .wrapper-content{
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    .wrapper-content .btn-signup a,
+    .wrapper-content .btn-signup{
+        font-size: 1rem;
+    }
 }
