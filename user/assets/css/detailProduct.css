@@ -1,0 +1,62 @@
+.add_cart h2{
+    display: inline-block;
+    font-size: 3rem;
+}
+
+.add_cart .counter{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.add_cart .increment,
+.add_cart .decrement{
+    border: 1px solid #ccc;
+    padding: 0rem 1rem;
+    font-size: 2rem;
+}
+
+.add_cart .increment:hover,
+.add_cart .decrement:hover{
+    background-color: var(--orange);
+    color: white;
+}
+
+.add_cart .count{
+    font-size: 2rem;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin: 0 1rem;
+    width: 5rem;
+}
+
+.add_cart .count:focus{
+    border: 1px solid var(--orange);
+    box-shadow: 0 0 3px var(--orange);
+}
+
+.add_cart .sub-total{
+    font-size: 2rem;
+    margin: 0;
+}
+
+.add_cart .sub-total span{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.add_cart .btn_add_cart,
+.add_cart .btn_buy{
+    width: 100%;
+    font-size: 2rem;
+    margin: 1rem 0 0;
+    padding: 1rem 0;
+    background-color: white;
+    border: 1px solid var(--orange);
+}
+
+.add_cart .btn_add_cart:hover,
+.add_cart .btn_buy:hover{
+    background-color: #fed295;
+    font-weight: 600;
+}
