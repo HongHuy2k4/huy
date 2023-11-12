@@ -62,7 +62,7 @@
                     <input type="email" name="email" id="email" placeholder="email">
                     <input type="text" name="phonenumber" id="phonenumber" placeholder="phonenumber">
                     <?php echo "$warning" ?>
-                    <button type="submit">Đăng nhập</button>
+                    <button type="submit">Đăng ký</button>
                 </form>
                 <div class="link">
                     <a href="#">Forgot password</a>

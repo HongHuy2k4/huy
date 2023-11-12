@@ -35,7 +35,7 @@ CREATE TABLE product (
     T_name_pro VARCHAR(50),
     I_qty_in_stock INT,
     I_price INT,
-    T_img_sample VARCHAR(250),
+    T_img_sample_pro VARCHAR(250),
     T_description VARCHAR(100),
     I_id_seller INT,
     FOREIGN KEY (I_id_seller) REFERENCES sellers(I_id_seller)
@@ -62,7 +62,7 @@ CREATE TABLE category (
     I_id_category INT PRIMARY KEY AUTO_INCREMENT,
     T_name_category VARCHAR(50),
     T_description VARCHAR(500),
-    T_img_sample VARCHAR(45),
+    T_img_sample_category VARCHAR(45),
     I_id_parent INT
 );
 

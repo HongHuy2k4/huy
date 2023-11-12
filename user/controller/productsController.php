@@ -18,7 +18,7 @@
                         echo'
                             <li>
                                 <a class="parent_category">
-                                    <img src="'.$row['T_img_sample'].'" alt="ảnh minh họa">
+                                    <img src="'.$row['T_img_sample_category'].'" alt="ảnh minh họa">
                                     '.$row['T_name_category'].'
                                 </a>
                                 <ul class="sub_category">
@@ -26,7 +26,7 @@
                         while($sub_row = mysqli_fetch_array($sub_result)){
                             echo'
                                 <li><a href="index.php?route=product&&iddm='.$sub_row['I_id_category'].'">
-                                    <img src="'.$sub_row['T_img_sample'].'" alt="ảnh minh họa">
+                                    <img src="'.$sub_row['T_img_sample_category'].'" alt="ảnh minh họa">
                                     '.$sub_row['T_name_category'].'
                                 </a></li>
                             ';
@@ -39,7 +39,7 @@
                         echo'
                             <li>
                                 <a class="parent_category" href="index.php?route=product&&iddm='.$row['I_id_category'].'">
-                                    <img src="'.$row['T_img_sample'].'" alt="ảnh minh họa">
+                                    <img src="'.$row['T_img_sample_category'].'" alt="ảnh minh họa">
                                     '.$row['T_name_category'].'
                                 </a>
                             </li>
@@ -49,13 +49,36 @@
             }
         }
 
+        public function select_category_parent(){
+            $result = $this->products_sign->select_category_parent();
+            while($row = mysqli_fetch_array($result)){
+                echo '
+                    <a href="index.php?route=product&&iddm='.$row['I_id_category'].'" class="icons">
+                        <img src="'.$row['T_img_sample_category'].'" alt="ảnh minh họa">
+                        <div class="info">
+                        <h3>'.$row['T_name_category'].'</h3>
+                        </div>
+                    </a>
+                ';
+            }
+        }
+
         public function select($iddm,$start,$limit){
-            $result = $this->products_sign->select($iddm,$start,$limit);
+            if(!empty($iddm)){
+                $check = $this->products_sign->select_sub_category($iddm);
+                $count = 0;
+                while($row_A  = mysqli_fetch_array($check)){
+                    $count++;
+                }
+            }else{
+                $count = 0;
+            }
+            $result = $this->products_sign->select($iddm,$start,$limit,$count);
             while($row = mysqli_fetch_array($result)){
                 echo '
                     <div class="col-lg-3 col-md-4 col-6 item">
                         <a href="#">
-                            <img src="'.$row['T_img_sample'].'" alt="ảnh sản phẩm">
+                            <img src="'.$row['T_img_sample_pro'].'" alt="ảnh sản phẩm">
                             <h3 class="name-product">'.$row['T_name_pro'].'</h3>
                             <div class="review-sold">
                                 <div class="review">
@@ -92,6 +115,37 @@
             return false;
         }
         
+        public function newSelect(){
+            $result = $this->products_sign->newSelect();
+            while($row = mysqli_fetch_array($result)){
+                echo '
+                    <div class="box">
+                        <a href="#">
+                            <img src="'.$row['T_img_sample_pro'].'" alt="PRODUCT">
+                            <h3>'.$row['T_name_pro'].'</h3>
+                            <div class="price">$12.99 <span>'.$row['I_price'].'</span> </div>
+                        </a>
+                ';
+                if(isset($_SESSION['username'])){
+                    echo'
+                        <a href="index.php?route=home&&addCart=true&&idsp='.$row['I_id_pro'].'" class="btn">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            Thêm vào giỏ
+                        </a>
+                    ';
+                }else{
+                    echo'
+                        <a href="index.php?route=home&&addCart=flase" class="btn">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            Thêm vào giỏ
+                        </a>
+                    ';
+                }
+                echo'</div>
+                ';
+            }
+        }
+
         public function addCart($idsp,$username){
             $idUser = $this->products_sign->getId_user($username);
             $idCart = $this->products_sign->getId_cart($idUser);

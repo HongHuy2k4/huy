@@ -1,5 +1,5 @@
 <?php
-    if($_GET){
+    if(isset($_GET['ql'])){
         $sign = $_GET['ql'];
 
         switch ($sign) {

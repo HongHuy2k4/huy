@@ -1,12 +1,3 @@
-:root{
-    --main-color: #66FCF1;
-    --white: #ffffff;
-    --black: #13131a;
-    --bg: #010103;
-    --orange: #fca935;
-    --border: .1rem solid rgba(255,255,255,.3);
-}
-
 ::placeholder{
     color: #fff;
 }
@@ -63,12 +54,9 @@ section{
     padding: .9rem 3rem;
     font-size: 1.7rem;
     color: var(--black);
-    background: var(--main-color);
+    background: var(--orange);
     cursor: pointer;
-}
-
-.btn:hover{
-    letter-spacing: .2rem;
+    border-radius: 12px;
 }
 
 /* header */

@@ -4,11 +4,11 @@
     include ('../controller/qlkhController.php');
 
     if(isset($_SESSION['userName'])){
-        $userName = $_GET('userName');
+        $userName = $_SESSION['username'];
         $avata = "";
     }
 
-    if($_GET){
+    if(isset($_GET['ql'])){
         $_SESSION['ql'] = $_GET['ql'];
     }
 ?>
@@ -39,7 +39,7 @@
                         echo '<img src="'.$avata.'" alt="avata" class="avata">';
                     }
                 ?>
-                <p class="name">xin chào <br> <span>Admin</span></p>
+                <p class="name">xin chào <br> <span><?php echo $_SESSION['username']?></span></p>
             </div>
             <ul class="menu">
                 <li><a href="main.php?ql=db" id="dashBoard">
@@ -74,7 +74,7 @@
                         </a></li>
                     </ul>
                 </li>
-                <li><a href="#" id="signout">
+                <li><a href="../../user/view/content/signout.php" id="signout">
                     <i class="icon fa-solid fa-arrow-right-from-bracket"></i>
                     Đăng xuất
                 </a></li>

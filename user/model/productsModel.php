@@ -12,15 +12,26 @@
             return $result;
         }
 
+        public function select_category_parent(){
+            $sql = "SELECT * FROM category WHERE I_id_parent IS NULL";
+            $result = mysqli_query($this->conn, $sql);
+            return $result;
+        }
+
         public function select_sub_category($iddm){
             $sql = "SELECT * FROM category WHERE I_id_parent = $iddm";
             $result = mysqli_query($this->conn, $sql);
             return $result;
         }
 
-        public function select($iddm,$start,$limit){
+        public function select($iddm,$start,$limit,$count){
             if(empty($iddm)){
                 $sql = "SELECT * FROM product LIMIT $start,$limit";
+            }else if($count > 0){
+                $sql = "SELECT * FROM product p 
+                JOIN pro_cate pc ON p.I_id_pro = pc.I_id_pro 
+                JOIN category c ON pc.I_id_category = c.I_id_category 
+                WHERE c.I_id_parent = ".$iddm." LIMIT $start, $limit";
             }else{
                 $sql = "SELECT * FROM product p 
                 JOIN pro_cate c ON p.I_id_pro = c.I_id_pro 
@@ -28,6 +39,12 @@
             }
 
             $result = mysqli_query($this->conn, $sql);
+            return $result;
+        }
+
+        public function newSelect(){
+            $sql = "SELECT * FROM product ORDER BY I_id_pro DESC LIMIT 20";
+            $result = mysqli_query($this->conn,$sql);
             return $result;
         }
 

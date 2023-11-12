@@ -27,7 +27,7 @@
       <button class="btn-search"><a class="fas fa-search"></a></button>
       <?php
          if(isset($_SESSION['username'])){
-            $cartController->selectData($_SESSION['username']);
+            $cartController->selectCount($_SESSION['username']);
             echo "
             <a href='#' class='fas fa-user btn-user'></a>
             <ul class='dropdown-user'>

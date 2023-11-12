@@ -1,3 +1,24 @@
+<?php
+  include("database/connect.php");
+  include("user/controller/productsController.php");
+
+  $productsController = new ProductsController($conn);
+
+  if(isset($_GET['addCart'])){
+    if(!strcmp($_GET['addCart'],'true')){
+        $msg = $productsController->addCart($_GET['idsp'], $_SESSION['username']);
+    }else{
+        $msg = "warning_cart";
+    }
+    header("location:index.php?route=home&&msg_add_cart=$msg");
+}
+
+if(isset($_GET['msg_add_cart'])){
+    $msg_add_cart = $_GET['msg_add_cart'];
+}
+?>
+
+<!-- slider section starts -->
 <div class="slider-banner container">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -33,3 +54,30 @@
         </button>
         </div>
     </div>
+  <!-- slider section ends -->
+
+  <!-- icons section starts -->
+  <div class="container box-category">
+    <h2>Danh mục</h2>
+    <div class="icons-container">
+      <?php
+        $productsController->select_category_parent();
+      ?>
+    </div>
+  </div>
+
+    <button class="next-button">></button>
+    <button class="prev-button"><</button>
+  </div>
+  <!-- icons section ends -->
+
+  <!-- products section starts -->
+  <section class="products container" id="products">
+    <h1 class="heading"><span>sản phẩm</span> mới nhất </h1>
+    <div class="box-container">
+      <?php
+        $productsController->newSelect();
+      ?>
+    </div>
+  </section>
+  <!-- products section ends -->

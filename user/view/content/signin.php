@@ -18,7 +18,10 @@
             $warning = $warning_empty;
         }else{
             $result = $signinController->check($_POST['username'], $_POST['password']);
-            if($result){
+            if(!strcmp($result,"admin")){
+                $_SESSION['username'] = $_POST['username'];
+                header("location: ../../../admin/view/main.php");
+            }else if(!strcmp($result,"user")){
                 $_SESSION['username'] = $_POST['username'];
                 header("location: ../../../index.php");
             }else{

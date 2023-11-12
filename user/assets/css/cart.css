@@ -48,7 +48,6 @@
 
 .show_pro{
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -69,17 +68,17 @@
     margin: 0;
 }
 
-.price,
-.total_price{
+.price_cart,
+.total_price_cart{
     font-size: 1.8rem;
     font-weight: 600;
 }
 
-.price{
+.price_cart{
     color: #222;
 }
 
-.total_price{
+.total_price_cart{
     color: red;
 }
 
@@ -117,7 +116,7 @@
 .box_buy{
     position: sticky;
     top: 10rem;
-    margin: 2rem 0;
+    margin: 2rem 0 13rem;
     padding: 2rem;
     height: 100%;
     box-shadow: 0 0 2px #ccc;
@@ -140,6 +139,7 @@
 
 .box_buy .total_price{
     font-size: 2.5rem;
+    color: red;
 }
 
 .box_buy .btn_update_cart,
