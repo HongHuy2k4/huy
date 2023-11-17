@@ -15,19 +15,19 @@
   padding-right: 2rem;
 }
 
-.col-1,.col-3{
+.col1,.col3{
   position: sticky;
   top: 11rem;
 }
 
-.col-1{
+.col1{
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 74rem;
 }
 
-.col-1 .main-image {
+.col1 .main-image {
   height: 40rem; 
   padding: 2rem;
   border: .2rem solid #000;
@@ -39,28 +39,28 @@
 
 }
 
-.col-1 .main-image img {
+.col1 .main-image img {
   height: 100%;
   object-fit: contain;
 }
 
-.col-1 .slider-container {
+.col1 .slider-container {
   max-width: 400px;
 }
 
-.col-1 .slider-thumbnails {
+.col1 .slider-thumbnails {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.col-1 .slider-thumbnails .thumbnail {
+.col1 .slider-thumbnails .thumbnail {
   margin: 0 5px;
   cursor: pointer;
   border-radius: 1rem;
 }
 
-.col-1 .slider-thumbnails .thumbnail img{
+.col1 .slider-thumbnails .thumbnail img{
   height: 6rem;
   padding: .3rem;
   object-fit: contain; 
@@ -75,35 +75,35 @@
   border: 3px solid #000;
 }
 
-.col-1 .features{
+.col1 .features{
   width: 45rem;
   padding: 2rem;
 }
 
-.col-1 .features h2{
+.col1 .features h2{
   font-size: 2rem;
   font-weight: 500;
   padding-bottom: .8rem;
 }
 
-.col-1 .features .row i{
+.col1 .features .row i{
   font-size: 1.5rem;
   padding-top: .5rem;
   color: rgb(0, 64, 255);
 }
 
-.col-1 .features .row p{
+.col1 .features .row p{
   line-height: 1.8rem;
   font-size: 1.5rem;
   padding: .3rem;
 }
 
-.col-2 .info{
+.col2 .info{
   display: flex;
   margin: 1rem 0;
 }
 
-.col-2 .info h4{
+.col2 .info h4{
   display: inline-block;
   font-size: 1.5rem;
   padding: 0 .9rem;
@@ -112,58 +112,58 @@
   border-radius: 2rem;
 }
 
-.col-2 .info p{
+.col2 .info p{
   display: inline-block;
   font-size: 1.3rem;
   margin: 0 1rem;
 }
 
-.col-2 h1{
+.col2 h1{
   font-size: 2rem;
   font-weight: 500;
   padding-bottom: .9rem;
 }
 
-.col-2 .rate{
+.col2 .rate{
   font-size: 1.6rem;
 }
 
-.col-2 .rate i{
+.col2 .rate i{
   color: orange;
   font-size: 1.3rem;
 }
 
-.col-2 .rate span{
+.col2 .rate span{
   color: #aaa;
 }
 
-.col-2 .price{
+.col2 .price{
   font-size: 2rem;
   font-weight: 600;
   padding-top: .6rem;
 }
 
-.col-2 .price h1{
+.col2 .price h1{
   font-size: 3rem;
 }
 
-.col-2 .price span{
+.col2 .price span{
   display: inline-block;
   font-size: 1.4rem;
   border-radius: .8rem;
   background-color: #f0f0f6;
 }
 
-.col-2 .details{
+.col2 .details{
   margin-top: 1rem;
 }
 
-.col-2 .details h2{
+.col2 .details h2{
   font-size: 1.6rem;
   font-weight: 600;
 }
 
-.col-2 .details .row{
+.col2 .details .row{
   display: flex;  
   flex-wrap: nowrap;
   align-items: center;
@@ -172,72 +172,72 @@
   border-bottom: .1rem solid rgba(0, 0, 0, 0.1);
 }
 
-.col-2 .details .row:last-child{
+.col2 .details .row:last-child{
   border: none;
 }
 
-.col-2 .details .row span,
-.col-2 .details .row div{
+.col2 .details .row span,
+.col2 .details .row div{
   width: 24rem;
   display: inline-block;
   font-size: 1.6rem;
 }
 
-.col-2 .details .row span{
+.col2 .details .row span{
   color: #aaa;
 }
 
-.col-2 .description h2{
+.col2 .description h2{
   font-size: 1.6rem;
   padding: 1rem 0;
 }
 
-.col-2 .description p{
+.col2 .description p{
   font-size: 1.5rem;
   line-height: 1.6;
 }
 
-.col-2 .description ul li{
+.col2 .description ul li{
   font-size: 1.5rem;
 }
 
-.col-3{
+.col3{
   height: 38rem;
 }
 
-.col-3 .heading{
+.col3 .heading{
   display: flex;
   align-items: center;
   padding: 0;
 }
 
-.col-3 .heading img{
+.col3 .heading img{
   height: 5rem;
   padding-right: 1rem;
 }
 
-.col-3 .heading h2{
+.col3 .heading h2{
   text-transform: none;
   color: #000;
   font-size: 2rem;
   font-weight: 400;
 }
 
-.col-3 .quantity{
+.col3 .quantity{
   margin: .2rem 0;
 }
 
-.col-3 .quantity h3{
+.col3 .quantity h3{
   font-size: 1.8rem;
   padding: 1rem 0;
 }
 
-.col-3 .quantity .quantity-container {
+.col3 .quantity .quantity-container {
   display: flex;
   align-items: center;
 }
 
-.col-3 .quantity .quantity-input {
+.col3 .quantity .quantity-input {
   width: 4rem;
   height: 4rem;
   text-align: center;
@@ -246,24 +246,24 @@
   font-size: 1.6rem;
 }
 
-.col-3 .quantity .quantity-button {
+.col3 .quantity .quantity-button {
   cursor: pointer;
   width: 4rem;
   height: 4rem;
   font-size: 1.6rem;
 }
 
-.col-3 .total h2{
+.col3 .total h2{
   font-size: 1.6rem;
 }
 
-.col-3 .total span{
+.col3 .total span{
   font-size: 3rem;
   font-weight: 500;
 }
 
-.col-3 .buy,
-.col-3 .cart{
+.col3 .buy,
+.col3 .cart{
   display: block;
   font-size: 2rem;
   width: 100%;
@@ -272,22 +272,22 @@
   cursor: pointer;
 }
 
-.col-3 .buy{
+.col3 .buy{
   color: #fff;
   background-color: rgb(255, 80, 80);
 }
 
-.col-3 .buy:hover{
+.col3 .buy:hover{
   opacity: .8;
 }
 
-.col-3 .cart{
+.col3 .cart{
   color: rgb(0, 64, 255);
   background-color: #fff;
   border: .1rem solid rgb(0, 64, 255);
 }
 
-.col-3 .cart:hover{
+.col3 .cart:hover{
   color: #fff;
   background-color: rgb(0, 64, 255);
 }
@@ -680,4 +680,118 @@
 .add_cart .btn_buy:hover{
     background-color: #fed295;
     font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width: 1368px) {
+  html{
+    font-size: 55%;
+  }
+
+  .header{
+    padding: 1.5rem 2rem;
+  }
+
+  section{
+    padding: 2rem;
+  }
+
+  .product {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .col1,
+  .col3{
+    position: static;
+  }
+}
+
+@media (max-width: 1029px) {
+  .react{
+    width: 50vw;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-btn{
+    display: inline-block;
+  }
+
+  .header .navbar{
+    position: absolute;
+    top: 100%; right: -100%;
+    background: #fff;
+    width: 30rem;
+    height: calc(100vh - 9.5rem);
+  }
+
+  .header .navbar.active{
+    right: 0;
+  }
+
+  .header .navbar a{
+    color: var(--black);
+    display: block;
+    margin: 1.5rem;
+    padding: .5rem;
+    font-size: 2rem;
+  }
+
+  .header .search-form{
+    width: 90%;
+    right: 2rem;
+  }
+
+  .comment .wrap .box {
+    flex-direction: column;
+  }
+
+  .wrap .box .overview .row{
+    width: 80vw;
+  }
+
+  hr{
+    width: 77vw;
+  }
+
+  .wrap .box .overview-info{
+    padding-top: 2rem;
+  }
+
+  .wrap .box .overview-info,
+  .react{
+    border-left: none;
+  }
+
+  .user{
+    width: 80vw;
+  }
+}
+
+@media (max-width: 450px) {
+  html{
+    font-size: 50%;
+  }
 }

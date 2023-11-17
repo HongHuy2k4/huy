@@ -11,7 +11,7 @@
 <body>
   <!-- product sections starts -->
   <section class="product">
-    <div class="column col-1">
+    <div class="column col1">
       <div class="slider-container">
         <div class="main-image"><img src="https://dosi-in.com/images/detailed/42/CDL11_1.jpg" alt="Product Image"></div>
         <div class="slider-thumbnails">
@@ -49,7 +49,7 @@
       </div>
     </div>
 
-    <div class="column col-2">
+    <div class="column col2">
       <div class="info">
         <h4><i class="fa-solid fa-circle-check"></i>Chính hãng</h4>
         <p>Thương hiệu: Apple</p>
@@ -197,7 +197,7 @@
       <input type="checkbox" class="expand-btn">
     </div>
 
-    <div class="column col-3">
+    <div class="column col3">
       <div class="heading">
         <img src="https://kingkongsportwear.vn/wp-content/uploads/2023/01/z4067747139840_dbb0b60b7188ae6968c87962641b0bbb-300x300.jpg" alt="">
         <h2>Tím, 128GB</h2>
