@@ -1,5 +1,4 @@
 .product {
-  margin-top: 9rem;
   padding: 4rem;
   display: flex;
   gap: 5rem;
@@ -25,7 +24,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 72rem;
+  height: 74rem;
 }
 
 .col-1 .main-image {
@@ -87,10 +86,6 @@
   padding-bottom: .8rem;
 }
 
-.col-1 .features .row {
-  display: flex;
-}
-
 .col-1 .features .row i{
   font-size: 1.5rem;
   padding-top: .5rem;
@@ -101,7 +96,6 @@
   line-height: 1.8rem;
   font-size: 1.5rem;
   padding: .3rem;
-  word-wrap: normal;
 }
 
 .col-2 .info{
@@ -170,11 +164,12 @@
 }
 
 .col-2 .details .row{
-  display: flex;
+  display: flex;  
+  flex-wrap: nowrap;
   align-items: center;
   font-size: 2.4rem;
   padding: 1rem 0;
-  border-bottom: var(--border);
+  border-bottom: .1rem solid rgba(0, 0, 0, 0.1);
 }
 
 .col-2 .details .row:last-child{
@@ -213,6 +208,7 @@
 .col-3 .heading{
   display: flex;
   align-items: center;
+  padding: 0;
 }
 
 .col-3 .heading img{
@@ -221,12 +217,14 @@
 }
 
 .col-3 .heading h2{
+  text-transform: none;
+  color: #000;
   font-size: 2rem;
   font-weight: 400;
 }
 
 .col-3 .quantity{
-  margin: 1.2rem 0;
+  margin: .2rem 0;
 }
 
 .col-3 .quantity h3{
@@ -330,6 +328,7 @@
 }
 
 .wrap .box .overview .heading {
+  color: #000;
   font-size: 2.5rem;
   margin-right: 1rem;
 }
@@ -417,6 +416,56 @@
   padding-right: 0.5rem;
 }
 
+/* Mở rộng, thu gọn trang */
+
+.cutoff-text{
+  --max-lines: 3;
+  --line-height: 1.4;
+
+  max-height: calc(var(--max-lines) * 1em * var(--line-height));
+  line-height: var(--line-height);;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.cutoff-text:has(+ .expand-btn:not(:checked))::before{
+  content: "";
+  position: absolute;
+  height: calc(1em * var(--line-height));
+  width: 100%;
+  bottom: 0;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, #fff);
+}
+
+.expand-btn{
+  width: 100%;
+  font-size: 1.6rem;
+  color: rgb(0, 64, 255);
+  text-align: center;
+  appearance: none;
+  padding: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.expand-btn:hover{
+  opacity: .7;
+}
+
+.expand-btn::before{
+  content: "Xem thêm";
+}
+
+.expand-btn:checked::before{
+  content: "Thu gọn";
+}
+
+.cutoff-text:has(+ .expand-btn:checked){
+  max-height: none;
+}
+
 .user{
   width: 52.8rem;
   padding: 1rem;
@@ -424,7 +473,6 @@
 
 .user .heading{
   display: flex;
-  margin-left: 12rem;
 }
 
 .user .heading .logo{
@@ -440,15 +488,18 @@
 
 .user .heading .name{
   padding-left: 0.8rem;
+  font-size: 1.6rem;
 }
 
 .user .heading .name h1{
+  color: #000;
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 2.4rem;
 }
 
 .user .heading .name span{
+  color: #000;
   font-size: 1.3rem;
   line-height: 2rem;
   text-transform: none;

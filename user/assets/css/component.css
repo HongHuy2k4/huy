@@ -80,6 +80,7 @@ section{
     margin: 0 1rem;
     font-size: 2rem;
     color: #fff;
+    text-decoration: none;
 }
 
 .header .navbar a:hover{
@@ -221,6 +222,8 @@ section{
     border: var(--border);
     margin: .3rem;
     border-radius: 50%;
+    text-decoration: none;
+
 }
 
 .footer .share a:hover{
@@ -241,6 +244,8 @@ section{
     color: #fff;
     border: var(--border);
     font-size: 2rem;
+    text-decoration: none;
+
 }
 
 .footer .links a:hover{

@@ -18,7 +18,17 @@ if(isset($_GET['msg_add_cart'])){
 }
 ?>
 
-<!-- slider section starts -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./user/assets/css/home.css">
+
+</head>
+<body>
+  <!-- slider section starts -->
 <div class="slider-banner container">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -81,3 +91,5 @@ if(isset($_GET['msg_add_cart'])){
     </div>
   </section>
   <!-- products section ends -->
+</body>
+</html>

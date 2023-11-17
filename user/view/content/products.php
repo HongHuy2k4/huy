@@ -30,31 +30,41 @@
     }
 ?>
 
-<main>
-    <h1>Products Page</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./user/assets/css/products.css">
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-2 col-4 category">
-                <h4>Category</h4>
-                <ul>
-                    <?php
-                        $productsController->select_category();
-                    ?>
-                </ul>
+</head>
+<body>
+<h1>Products Page</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-2 col-4 category">
+            <h4>Category</h4>
+            <ul>
+                <?php
+                    $productsController->select_category();
+                ?>
+            </ul>
+        </div>
+        <div class="col-md-9 col-7 products">
+            <div class="row">
+                <?php
+                    $productsController->select($iddm,$start,$limit);
+                ?>
             </div>
-            <div class="col-md-9 col-7 products">
-                <div class="row">
-                    <?php
-                        $productsController->select($iddm,$start,$limit);
-                    ?>
-                </div>
-                <div class="row page-number">
-                    <?php
-                        $productsController->pagination($iddm,$page,$total_pages);
-                    ?>
-                </div>
+            <div class="row page-number">
+                <?php
+                    $productsController->pagination($iddm,$page,$total_pages);
+                ?>
             </div>
         </div>
     </div>
-</main>
+</div>
+</body>
+</html>

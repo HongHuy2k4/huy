@@ -1,5 +1,16 @@
-<!-- product sections starts -->
-<section class="product">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./user/assets/css/detailProduct.css">
+</head>
+
+<body>
+  <!-- product sections starts -->
+  <section class="product">
     <div class="column col-1">
       <div class="slider-container">
         <div class="main-image"><img src="https://dosi-in.com/images/detailed/42/CDL11_1.jpg" alt="Product Image"></div>
@@ -13,22 +24,25 @@
       <div class="features">
         <h2>Đặc điểm nổi bật</h2>
         <div class="row">
-          <i class="fa-solid fa-circle-check"></i>
+
           <p>
+            <i class="fa-solid fa-circle-check"></i>
             Camera chính 48MP cho độ phân giải gấp 4 lần, quay video 4K Dolby Vision.
           </p>
         </div>
 
         <div class="row">
-          <i class="fa-solid fa-circle-check"></i>
+
           <p>
+            <i class="fa-solid fa-circle-check"></i>
             Camera chính 48MP cho độ phân giải gấp 4 lần, quay video 4K Dolby Vision.
           </p>
         </div>
 
         <div class="row">
-          <i class="fa-solid fa-circle-check"></i>
+
           <p>
+            <i class="fa-solid fa-circle-check"></i>
             Camera chính 48MP cho độ phân giải gấp 4 lần, quay video 4K Dolby Vision.
           </p>
         </div>
@@ -371,24 +385,28 @@
     </div>
   </section>
   <!-- comment sections ends -->
-<main>
+  <main>
     <div class="container">
-        <div class="row">
-            <div class="col-md-9 col-12 infor"></div>
-            <div class="col-md-3 add_cart">
-                <form action="" method="POST" class="box">
-                    <input type="hidden" name="cart_id" value="1">
-                    <h2>Số lượng</h2>
-                    <div class="counter">
-                        <button type="button" class="decrement">-</button>
-                        <input type="input" class="count" require value="1" min="1" max="99">
-                        <button type="button" class="increment">+</button>
-                    </div>
-                    <p class="sub-total">Tổng tiền : <span>1000000<i class="fa-solid fa-dong-sign"></i></span></p>
-                    <button type="submit" name="update_cart" class="btn_buy"><i class="fa-solid fa-receipt"></i> Mua ngay</button>
-                    <button type="submit" name="update_cart" class="btn_add_cart"><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button>
-                </form>
+      <div class="row">
+        <div class="col-md-9 col-12 infor"></div>
+        <div class="col-md-3 add_cart">
+          <form action="" method="POST" class="box">
+            <input type="hidden" name="cart_id" value="1">
+            <h2>Số lượng</h2>
+            <div class="counter">
+              <button type="button" class="decrement">-</button>
+              <input type="input" class="count" require value="1" min="1" max="99">
+              <button type="button" class="increment">+</button>
             </div>
+            <p class="sub-total">Tổng tiền : <span>1000000<i class="fa-solid fa-dong-sign"></i></span></p>
+            <button type="submit" name="update_cart" class="btn_buy"><i class="fa-solid fa-receipt"></i> Mua ngay</button>
+            <button type="submit" name="update_cart" class="btn_add_cart"><i class="fas fa-shopping-cart"></i>Thêm vào giỏ hàng</button>
+          </form>
         </div>
+      </div>
     </div>
-</main>
+  </main>
+
+</body>
+
+</html>

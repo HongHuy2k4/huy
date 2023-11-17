@@ -25,6 +25,16 @@
     }
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./user/assets/css/cart.css">
+
+</head>
+<body>
 <form action="index.php" method="get" class="container"> 
     <input type="hidden" name="route" value="cart">
         <div class="row">
@@ -72,3 +82,5 @@
             </div>
         </div>
     </form>
+</body>
+</html>
