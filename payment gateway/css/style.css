@@ -20,7 +20,7 @@
 
 .container form{
   padding:20px;
-  width:700px;
+  width:1200px;
   background: #fff;
   box-shadow: 0 5px 10px rgba(0,0,0,.1);
 }
@@ -28,7 +28,7 @@
 .container form .row{
   display: flex;
   flex-wrap: wrap;
-  gap:15px;
+  gap:20px;
 }
 
 .container form .row .col{
@@ -46,17 +46,31 @@
   margin:15px 0;
 }
 
-.container form .row .col .inputBox span{
+.container form .row .col .inputBox span,
+.container form .row .col .inputBox label{
   margin-bottom: 10px;
-  display: block;
+  display: inline-block;
 }
 
-.container form .row .col .inputBox input{
+.container form .row .col .inputBox input[type=text],
+.container form .row .col .inputBox select{
   width: 100%;
   border:1px solid #ccc;
   padding:10px 15px;
   font-size: 15px;
   text-transform: none;
+}
+
+.container form .row .col .inputBox input[type=checkbox]{
+  margin: 5px;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  font-size: 15px;
 }
 
 .container form .row .col .inputBox input:focus{
@@ -69,13 +83,8 @@
 }
 
 .container form .row .col .flex .inputBox{
+  flex: 1;
   margin-top: 5px;
-}
-
-.container form .row .col .inputBox img{
-  height: 34px;
-  margin-top: 5px;
-  filter: drop-shadow(0 0 1px #000);
 }
 
 .container form .submit-btn{
@@ -90,4 +99,39 @@
 
 .container form .submit-btn:hover{
   background: #2ecc71;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td{
+  padding: 10px 5px;
+}
+
+td:last-child{
+  text-align: right;
+}
+
+tr{
+  border-bottom: 1px solid #aaa;
+}
+
+tr:last-child{
+  border-bottom: none;
+}
+
+.inputBox .momo{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.inputBox .momo span{
+  margin-top: 8px;
+}
+
+.inputBox .momo img{
+  height: 40px;
 }
