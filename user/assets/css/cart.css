@@ -58,19 +58,19 @@
 }
 
 .show_pro img{
-    width: 15%;
+    width: 20%;
     margin: 0 0.3rem;
 }
 
 .show_pro h5{
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     font-weight: 400;
     margin: 0;
 }
 
 .price_cart,
 .total_price_cart{
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 600;
 }
 

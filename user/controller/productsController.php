@@ -75,10 +75,11 @@
             }
             $result = $this->products_sign->select($iddm,$start,$limit,$count);
             while($row = mysqli_fetch_array($result)){
+                $link_imgs = explode("|", $row['T_img_sample_pro']);
                 echo '
                     <div class="col-lg-3 col-md-4 col-6 item">
-                        <a href="#">
-                            <img src="'.$row['T_img_sample_pro'].'" alt="ảnh sản phẩm">
+                        <a href="index.php?route=detailProduct&&idsp='.$row['I_id_pro'].'">
+                            <img src="'.$link_imgs[0].'" alt="ảnh sản phẩm">
                             <h3 class="name-product">'.$row['T_name_pro'].'</h3>
                             <div class="review-sold">
                                 <div class="review">
@@ -88,7 +89,7 @@
                                     <img src="user/assets/img/star.png" alt="">
                                     <img src="user/assets/img/star.png" alt="">
                                 </div>
-                                <div class="sold">20 sold</div>
+                                <div class="sold">'.$row['I_sold'].' sold</div>
                             </div>
                             <div class="price">'.$row['I_price'].'</div>
                         </a>
@@ -118,10 +119,11 @@
         public function newSelect(){
             $result = $this->products_sign->newSelect();
             while($row = mysqli_fetch_array($result)){
-                echo '
+                $link_imgs = explode("|", $row['T_img_sample_pro']);
+                echo ' 
                     <div class="box">
                         <a href="#">
-                            <img src="'.$row['T_img_sample_pro'].'" alt="PRODUCT">
+                            <img src="'.$link_imgs[0].'" alt="PRODUCT">
                             <h3>'.$row['T_name_pro'].'</h3>
                             <div class="price">$12.99 <span>'.$row['I_price'].'</span> </div>
                         </a>

@@ -8,11 +8,24 @@
     if(isset($_GET['count'])){
         $counts = $_GET['count'];
 
-        if (!is_array($counts)) {
-            $counts = array($counts);
+        if(!isset($_SESSION['username'])){
+            header("location:user/view/content/signin.php");
         }
 
-        $msg = $cartController->updateCart($idCart,$idsps,$counts);
+        if(!is_array($counts)) {
+            $counts = array($counts);
+        }
+        
+        if(isset($_GET['idsp'])){
+            $idsps = array($_GET['idsp']);
+        }
+
+        if(isset($_GET['signDetail'])){
+            $sign = $_GET['signDetail'];
+        }else{
+            $sign = "false";
+        }
+        $msg = $cartController->updateCart($idCart,$idsps,$counts,$sign);
         header("location:index.php?route=cart&&msg_add_cart=$msg");
     }
 
@@ -82,5 +95,6 @@
             </div>
         </div>
     </form>
+    <script src="user/assets/script/cart.js"></script>
 </body>
 </html>

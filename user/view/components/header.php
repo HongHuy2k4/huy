@@ -7,7 +7,7 @@
 
 <header class="header">
    <a href="../../../index.php?route=home" class="logo">
-      <img src="https://cdn.logo.com/hotlink-ok/logo-social.png" alt="LOGO">
+      <img src="../../../user/assets/img/logo.png" alt="LOGO">
    </a>
 
    <nav class="navbar">
