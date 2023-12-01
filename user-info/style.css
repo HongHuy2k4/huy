@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  min-height: 100vh;
+  background: #eee;
+}
+
+.container form {
+  padding: 20px;
+  width: 700px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+
+.container form .row .title {
+  font-size: 20px;
+  color: #333;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.container form .row .inputBox {
+  margin: 15px 0;
+}
+
+.container form .row .inputBox label {
+  margin-right: 10px;
+}
+
+.container form .row .inputBox span,
+.container form .row .inputBox input[type=text],
+.container form .row .inputBox label {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.container form .row .inputBox input[type=text],
+.container form .row .inputBox select {
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  font-size: 15px;
+  text-transform: none;
+}
+
+.container form .row .inputBox select{
+  margin: 0 3px;
+}
+
+.container form .row .inputBox input[type=text]{
+  width: 300px;
+}
+
+.container form .row .inputBox input[type=radio] {
+  margin: 5px;
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+.container form .row .inputBox input:focus {
+  border: 1px solid #000;
+}
+
+.container form .row .flex {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.container form .row .flex .inputBox {
+  flex: 1;
+  margin-top: 5px;
+}
+
+.container form .submit-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 17px;
+  background: #27ae60;
+  color: #fff;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.container form .submit-btn:hover {
+  background: #2ecc71;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .container form {
+    width: 100%;
+  }
+
+  .container form .row .inputBox {
+    width: 100%;
+  }
+
+  .container form .row .inputBox input[type=text],
+  .container form .row .inputBox select {
+    width: 100%;
+  }
+
+  .container form .row .flex {
+    flex-direction: column;
+  }
+
+  .container form .row .inputBox input[type=text]{
+    max-width: 100%;
+  }
+}
