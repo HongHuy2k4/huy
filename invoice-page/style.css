@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ddd;
+}
+
+.wrapper{
+  width: 900px;
+  height: 620px;
+  background: #fff;
+  position: relative;
+  padding: 20px 40px;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  background: orange;
+}
+
+.navbar li{
+  display: inline-block;
+  padding: 15px 20px;
+  font-weight: 600;
+}
+
+.navbar li a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar li a:hover{
+  opacity: .7;
+  transition: opacity 0.1s linear;
+  color:rgb(132, 132, 232) ;
+}
+
+a{
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover{
+  color: orange;
+}
+
+h3{
+  margin-top: 15px;
+}
+
+table{
+  border-collapse: collapse;
+  font-size: 13px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+table thead tr td{
+  text-align: center;
+  font-weight: 600;
+  padding: 10px 5px;
+}
+
+img{
+  width: 2.5rem;
+}
+
+table tbody td{
+  padding: 10px 5px;
+  text-align: center;
+}
+
+table tbody tr:nth-child(odd){
+  background: #f0f0f0;
+}
+
+table tbody tr:nth-child(even){
+  background: #fcfcfc;
+  border-bottom: 1px solid #b4b4b4;
+  border-top: 1px solid #b4b4b4;
+}
+
+.back-btn{
+  margin-top: 18px;
+  padding: 7px 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+  background: orange;
+  border: none;
+}
+
+.back-btn:hover{
+  opacity: .7;
+  cursor: pointer;
+}
