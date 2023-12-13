@@ -43,26 +43,17 @@
 }
 
 .container form .row .inputBox span,
-.container form .row .inputBox input[type=text],
+.container form .row .inputBox input,
 .container form .row .inputBox label {
   margin-bottom: 10px;
   display: inline-block;
 }
 
-.container form .row .inputBox input[type=text],
-.container form .row .inputBox select {
+.container form .row .inputBox input{
   border: 1px solid #ccc;
   padding: 10px 15px;
   font-size: 15px;
   text-transform: none;
-}
-
-.container form .row .inputBox select{
-  margin: 0 3px;
-}
-
-.container form .row .inputBox input[type=text]{
-  width: 300px;
 }
 
 .container form .row .inputBox input[type=radio] {
@@ -101,6 +92,10 @@
   background: #2ecc71;
 }
 
+.w100{
+  width: 100%;
+}
+
 
 
 
@@ -115,8 +110,7 @@
     width: 100%;
   }
 
-  .container form .row .inputBox input[type=text],
-  .container form .row .inputBox select {
+  .container form .row .inputBox input[type=text] {
     width: 100%;
   }
 
