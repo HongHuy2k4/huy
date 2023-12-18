@@ -19,11 +19,14 @@
       $user_id = 2;
     }
 
+    $errorMessage = isset($_GET['error_message']) ? $_GET['error_message'] : '';
     $select_profile = $conn->prepare("SELECT * FROM users WHERE I_id_user = ?");
-    $select_profile->execute([$user_id]);
+    $select_profile->bind_param('i', $user_id);
+    $select_profile->execute();
+    $result = $select_profile->get_result();
 
-    if ($select_profile->rowCount() > 0) {
-      $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
+    if ($result->num_rows > 0) {
+      $fetch_profile = $result->fetch_assoc();
     ?>
 
       <form action="process.php" method="post">
@@ -50,11 +53,27 @@
             <span style="margin-right: 10px;">Khác</span>
           </div>
 
+
           <div class="inputBox">
-            <span style="margin-right: 10px;">địa chỉ</span>
-            <input style="width: 500px" type="text" name="address" value="<?= $fetch_profile['T_address']; ?>" placeholder="Ví dụ: 312 Nguyễn Huệ - A(Quận) - B(Thành phố) - C(Nước)" readonly>
-            <a style="display: block; width: 30%; text-align: center; text-decoration: none;" class="submit-btn" href="update_address.php">Cập nhật địa chỉ</a>
+            <div class="flex">
+              <span>Địa chỉ</span>
+              <select class="inputBox" name="" id="province">
+              </select>
+              <select class="inputBox" name="" id="district">
+                <option value="">chọn quận</option>
+              </select>
+              <select class="inputBox" name="" id="ward">
+                <option value="">chọn phường</option>
+              </select>
+            </div>
+
+            <input style="width: 400px;" type="text" name="address" placeholder="Vui lòng nhập số nhà và tên đường">
+
+            <input type="hidden" name="province" id="result">
           </div>
+
+
+
 
           <div class="flex">
             <div class="inputBox">
@@ -66,15 +85,13 @@
               <input type="email" name="email" value="<?= $fetch_profile['T_email']; ?>" placeholder="npc123@gmail.com">
             </div>
           </div>
+          <span class="error-message"><?= $errorMessage; ?></span>
         </div>
 
         <input type="submit" name="submit" value="Lưu thay đổi" class="submit-btn">
       </form>
 
     <?php
-
-
-
     } else {
       echo "Không tìm thấy thông tin người dùng.";
     }
@@ -85,7 +102,64 @@
 
 
 
-  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  
+  <script>
+    const host = "https://provinces.open-api.vn/api/";
+    var callAPI = (api) => {
+      return axios.get(api).then((response) => {
+        renderData(response.data, "province");
+      });
+    };
+    callAPI("https://provinces.open-api.vn/api/?depth=1");
+    var callApiDistrict = (api) => {
+      return axios.get(api).then((response) => {
+        renderData(response.data.districts, "district");
+      });
+    };
+    var callApiWard = (api) => {
+      return axios.get(api).then((response) => {
+        renderData(response.data.wards, "ward");
+      });
+    };
+
+    var renderData = (array, select) => {
+      let row = ' <option disable value="">chọn</option>';
+      array.forEach((element) => {
+        row += `<option value="${element.code}">${element.name}</option>`;
+      });
+      document.querySelector("#" + select).innerHTML = row;
+    };
+
+    $("#province").change(() => {
+      callApiDistrict(host + "p/" + $("#province").val() + "?depth=2");
+      printResult();
+    });
+    $("#district").change(() => {
+      callApiWard(host + "d/" + $("#district").val() + "?depth=2");
+      printResult();
+    });
+    $("#ward").change(() => {
+      printResult();
+    });
+
+    var printResult = () => {
+      if ($("#district").val() !== "" && $("#province").val() !== "" && $("#ward").val() !== "") {
+        let result =
+          $("#ward option:selected").text() +
+          " | " +
+          $("#district option:selected").text() +
+          " | " +
+          $("#province option:selected").text();
+        $("#result").val(result); // Sử dụng .val() để đặt giá trị cho input
+      }
+    };
+  </script>
+
+
+
 </body>
 
 </html>

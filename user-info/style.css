@@ -49,11 +49,14 @@
   display: inline-block;
 }
 
-.container form .row .inputBox input{
+.container form .row .inputBox input[type=email]{
+  text-transform: none;
+}
+
+.container form .row .inputBox input {
   border: 1px solid #ccc;
   padding: 10px 15px;
   font-size: 15px;
-  text-transform: none;
 }
 
 .container form .row .inputBox input[type=radio] {
@@ -92,9 +95,16 @@
   background: #2ecc71;
 }
 
-.w100{
-  width: 100%;
+.error-message {
+  color: red;
 }
+
+select{
+  margin-right: 20px;
+  width: 80px;
+}
+
+
 
 
 
@@ -106,10 +116,7 @@
     width: 100%;
   }
 
-  .container form .row .inputBox {
-    width: 100%;
-  }
-
+  .container form .row .inputBox,
   .container form .row .inputBox input[type=text] {
     width: 100%;
   }
@@ -118,7 +125,7 @@
     flex-direction: column;
   }
 
-  .container form .row .inputBox input[type=text]{
+  .container form .row .inputBox input[type=text] {
     max-width: 100%;
   }
 }
